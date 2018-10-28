@@ -1,0 +1,27 @@
+{% extends "gifts/base.html" %}
+
+{% block content %}
+<div class="container">
+<h2>To: {{ name_to }}</h2>
+    {% if not gifts %}
+        <h3>No entries for {{ name_to }}, which seems unexpected. </h3>
+    {% else %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">From</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for gift in gifts %}
+                <tr>
+                    <td>{{ gift.year }}</td>
+                    <td>{{ gift.name_from }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {%  endif %}
+ </div>
+{% endblock content %}

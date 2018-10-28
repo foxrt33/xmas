@@ -1,0 +1,33 @@
+{% extends "gifts/base.html" %}
+
+{% block content %}
+<h1>Christmas Gift History</h1>
+    {%  for entry in gifts_by_year %}
+        <h2> {{ entry.year }}</h2>
+        <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for gift in entry.gifts %}
+                <tr>
+                    <td>{{ gift.name_from }}</td>
+                    <td>{{ gift.name_to }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td>whoops!</td>
+                    <td></td>
+                </tr>
+            {%  endfor %}
+            </tbody>
+        </table>
+        </div>
+    {% empty %}
+        <p>no entries, which is not great</p>
+    {% endfor %}
+{% endblock content %}

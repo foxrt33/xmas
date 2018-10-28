@@ -1,0 +1,28 @@
+{% extends "gifts/base.html" %}
+
+{% block content %}
+<h1>Current</h1>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for gift in gifts %}
+                <tr>
+                    <td>{{ gift.name_from }}</td>
+                    <td>{{ gift.name_to }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td>whoops!</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
