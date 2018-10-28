@@ -1,7 +1,7 @@
 # Django stuff
 
 ## Installing python
-* Make python 3.6 the default ==
+* Make python 3.6 the default
 ```python
 sudo alternatives --set python /usr/bin/python3.6
 ```
@@ -28,7 +28,7 @@ pip install django-bootstrap4
 pip install import-export
 ```
 
-# Creating django app == 
+# Creating django app
 ```python
 django-admin startproject xmas
 python manage.py startapp gifts
