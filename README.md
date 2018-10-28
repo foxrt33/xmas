@@ -1,5 +1,11 @@
 # Django stuff
 
+## Apps
+* use nginx for web server
+```bash
+sudo yum install nginx
+```
+ 
 ## Installing python
 * Make python 3.6 the default
 ```python
