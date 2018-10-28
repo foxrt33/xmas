@@ -8,18 +8,18 @@ sudo yum install nginx
  
 ## Installing python
 * Make python 3.6 the default
-```python
+```bash
 sudo alternatives --set python /usr/bin/python3.6
 ```
 ## Initialize and update python env
-```python
+```bash
 python -m pip install --upgrade-pip --user
 python -m pip install virtualenv --user
 ```
 
 ## Setup virtualenv
 * create virtual env called pydev
-```python
+```bash
 python -m virtualenv pydev
 ```
 * activate venv
@@ -28,14 +28,14 @@ source pydev/bin/activate
 ```
 
 # Install project-specific stuff
-```python
+```bash
 pip install django
 pip install django-bootstrap4
 pip install import-export
 ```
 
 # Creating django app
-```python
+```bash
 django-admin startproject xmas
 python manage.py startapp gifts
 python manage.py runserver
@@ -47,7 +47,7 @@ python manage.py createsuperuser ## rfox/H0ust0n33
 * add people via admin
 * add exceptions via admin
 * add gifts via import/export
-```python
+```bash
 python manage.py loaddata data.json ## only contains the gifts.gift entries
 ```
 
