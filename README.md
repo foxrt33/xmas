@@ -31,7 +31,8 @@ source pydev/bin/activate
 ```bash
 pip install django
 pip install django-bootstrap4
-pip install import-export
+pip install django-import-export
+pip install gunicorn
 ```
 
 # Creating django app
